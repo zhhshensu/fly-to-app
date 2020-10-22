@@ -1,5 +1,5 @@
 {
-  "name": "@ke/fly-to-app",
+  "name": "fly-to-app",
   "version": "1.0.0",
   "description": "h5 唤起app",
   "main": "index.js",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.lianjia.com:shenzhonghui001/fly-to-app.git"
+    "url": "git@github.com:zhhshen-byte/fly-to-app.git"
   },
   "keywords": [],
-  "author": "shenzhonghui001",
+  "author": "zhhshen-byte",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.3",
