@@ -1,4 +1,4 @@
-import { openApp } from '../../src/index'
+import { openApp } from 'fly-to-app'
 
 // 打开微信
 const source = `weixin://dl/scan`
