@@ -4,7 +4,7 @@ import { openApp } from 'fly-to-app'
 const source = `weixin://dl/scan`
 openApp({
   source,
-  isApp: true, // 是否在app中
+  isApp: false, // 是否在app中
   target: 'http://m.ke.com',
   cb: () => {
     window.alert('打开成功')
