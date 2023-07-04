@@ -1,4 +1,5 @@
 ### h5 唤起app
+
 ---
 
 ``` javascript
@@ -10,8 +11,8 @@ openApp({
   iosBrowserUser: '', // 默认值micromessenger,weibo,mailapp,qq/
   androidToBrowserUser: '', // 默认值micromessenger,weibo,qq/
   cb: (os) => {
-    console.log(os) // 
-  }, 
+    console.log(os) //
+  },
 })
 
 ```

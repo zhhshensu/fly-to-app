@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>fly-to-app</title>
+	</head>
+	<body>
+		<script src="dist/umd/index.umd.js"></script>
+		<script type="module">
+			console.log(window.FlyToApp);
+			const { openApp } = window.FlyToApp;
+			// 打开微信
+			const source = `weixin://dl/scan`;
+			openApp({
+				source,
+				isApp: false, // 是否在app中
+				target: "http://www.baidu.com",
+				cb: () => {
+					window.alert("打开成功");
+				},
+			});
+		</script>
+	</body>
+</html>
