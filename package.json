@@ -1,6 +1,6 @@
 {
-  "name": "@zhh/fly-to-app",
-  "version": "1.0.1",
+  "name": "@niansu/fly-to-app",
+  "version": "1.0.3",
   "description": "h5 唤起app",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.esm.js",
