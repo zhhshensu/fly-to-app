@@ -8,18 +8,18 @@
 	<body>
 		<script src="dist/umd/index.umd.js"></script>
 		<script type="module">
-			console.log(window.FlyToApp);
-			const { openApp } = window.FlyToApp;
+			console.log(window.FlyToApp)
+			const { openApp } = window.FlyToApp
 			// 打开微信
-			const source = `weixin://dl/scan`;
+			const source = `weixin://dl/scan`
 			openApp({
 				source,
 				isApp: false, // 是否在app中
-				target: "http://www.baidu.com",
+				target: 'http://www.baidu.com',
 				cb: () => {
-					window.alert("打开成功");
+					window.alert('打开成功')
 				},
-			});
+			})
 		</script>
 	</body>
 </html>

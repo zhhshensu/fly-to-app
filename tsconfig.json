@@ -17,10 +17,6 @@
 		"esModuleInterop": true,
 		"removeComments": false,
 		"jsx": "preserve",
-		"lib": [
-			"esnext",
-			"dom",
-			"dom.iterable"
-		],
-	},
+		"lib": ["esnext", "dom", "dom.iterable"]
+	}
 }

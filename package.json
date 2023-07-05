@@ -1,56 +1,75 @@
 {
-  "name": "@niansu/fly-to-app",
-  "version": "1.0.6",
-  "description": "h5 唤起app",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.esm.js",
-  "browser": "dist/umd/index.umd.js",
-  "exports": {
+	"name": "@niansu/fly-to-app",
+	"version": "1.0.7",
+	"description": "h5 唤起app",
+	"main": "dist/cjs/index.js",
+	"module": "dist/es/index.esm.js",
+	"browser": "dist/umd/index.umd.js",
+	"types": "./types/index.d.ts",
+	"exports": {
 		".": {
-      "types": "./types/index.d.ts",
-      "import": "./dist/es/index.esm.js",
-      "require": "./dist/cjs/index.js"
-    }
-  },
-  "scripts": {
-    "dev": "npx rollup -wc rollup.config.dev.mjs",
-    "build": "rimraf dist && npx rollup -c rollup.config.mjs",
-    "prepare": "husky install",
-    "preinstall": "node scripts/disallow-npm.js",
-		"test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:zhhshensu/fly-to-app.git"
-  },
+			"types": "./types/index.d.ts",
+			"import": "./dist/es/index.esm.js",
+			"require": "./dist/cjs/index.js"
+		}
+	},
+	"scripts": {
+		"dev": "npx rollup -wc rollup.config.dev.mjs",
+		"build": "rimraf dist && npx rollup -c rollup.config.mjs",
+		"prepare": "husky install",
+		"lint": "eslint src",
+		"fix": "eslint src --fix",
+		"lint:eslint": "eslint src/**/*.{ts} --cache --fix",
+		"format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+		"commitlint": "npx commitlint --config commitlint.config.cjs -e -V"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:zhhshensu/fly-to-app.git"
+	},
 	"publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "keywords": [
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"keywords": [
 		"frontend",
-    "build-tool"
+		"build-tool"
 	],
-  "author": "zhhshensu",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.22.6",
-    "@babel/preset-env": "^7.22.6",
-    "@rollup/plugin-alias": "^5.0.0",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^25.0.2",
-    "@rollup/plugin-eslint": "^9.0.4",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.1.0",
-    "@rollup/plugin-terser": "^0.4.3",
-    "@rollup/plugin-typescript": "^11.1.2",
-    "husky": "^8.0.0",
-    "rimraf": "^5.0.1",
-    "rollup": "^3.26.0",
-    "rollup-plugin-filesize": "^10.0.0",
-    "rollup-plugin-livereload": "^2.0.5",
-    "rollup-plugin-serve": "^2.0.2",
-    "tslib": "^2.6.0",
-    "typescript": "^5.1.6"
-  }
+	"files": [
+		"dist",
+		"types"
+	],
+	"author": "zhhshensu",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.22.6",
+		"@babel/eslint-parser": "^7.22.6",
+		"@babel/preset-env": "^7.22.6",
+		"@commitlint/cli": "^17.6.6",
+		"@commitlint/config-conventional": "^17.6.6",
+		"@rollup/plugin-alias": "^5.0.0",
+		"@rollup/plugin-babel": "^6.0.3",
+		"@rollup/plugin-commonjs": "^25.0.2",
+		"@rollup/plugin-eslint": "^9.0.4",
+		"@rollup/plugin-json": "^6.0.0",
+		"@rollup/plugin-node-resolve": "^15.1.0",
+		"@rollup/plugin-terser": "^0.4.3",
+		"@rollup/plugin-typescript": "^11.1.2",
+		"@typescript-eslint/eslint-plugin": "^5.61.0",
+		"@typescript-eslint/parser": "^5.61.0",
+		"eslint": "^8.44.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"husky": "^8.0.0",
+		"prettier": "^2.8.8",
+		"rimraf": "^5.0.1",
+		"rollup": "^3.26.0",
+		"rollup-plugin-filesize": "^10.0.0",
+		"rollup-plugin-livereload": "^2.0.5",
+		"rollup-plugin-serve": "^2.0.2",
+		"tslib": "^2.6.0",
+		"typescript": "^5.1.6"
+	}
 }

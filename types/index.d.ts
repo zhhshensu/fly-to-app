@@ -1,4 +1,18 @@
-import { CheckOsType } from "../src";
+declare interface CheckOsType {
+	ua: string
+	isAndroid: boolean
+	isIOS: boolean
+	isIOS9plus: boolean
+	qqBrower: boolean
+}
 
-export function openApp(): void;
-export function checkOs(): CheckOsType;
+declare interface OpenAppOptions {
+	source: string
+	target: string
+	iosBrowserUser: string
+	androidBrowserUser: string
+	isApp: boolean
+	cb: (data?: CheckOsType) => void
+}
+declare function openApp(): void
+declare function checkOs(): CheckOsType
