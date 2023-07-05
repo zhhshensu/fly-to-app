@@ -15,13 +15,13 @@ npm install @niansu/fly-to-app -S
 ## 通过 CDN 使用
 
 ``` js
-<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.2/dist/umd/index.umd.js"></script>
+<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.3/dist/umd/index.umd.js"></script>
 ```
 
 所有顶层 API 都以属性的形式暴露在了FlyToApp对象上。这里有一个使用全局构建版本的例子：
 
 ``` js
-<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.2/dist/umd/index.umd.js"></script>
+<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.3/dist/umd/index.umd.js"></script>
 
 <script type="module">
    console.log(window.FlyToApp);
