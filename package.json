@@ -1,20 +1,23 @@
 {
   "name": "@niansu/fly-to-app",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "h5 唤起app",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.esm.js",
   "browser": "dist/umd/index.umd.js",
   "exports": {
-    "types": "./types/index.d.ts",
-    "import": "./dist/es/index.esm.js",
-    "default": "./dist/cjs/index.js"
+		".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/es/index.esm.js",
+      "require": "./dist/cjs/index.js"
+    }
   },
   "scripts": {
     "dev": "npx rollup -wc rollup.config.dev.mjs",
     "build": "rimraf dist && npx rollup -c rollup.config.mjs",
     "prepare": "husky install",
-    "preinstall": "node scripts/disallow-npm.js"
+    "preinstall": "node scripts/disallow-npm.js",
+		"test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,10 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "keywords": [],
+  "keywords": [
+		"frontend",
+    "build-tool"
+	],
   "author": "zhhshensu",
   "license": "ISC",
   "devDependencies": {

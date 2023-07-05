@@ -2,26 +2,26 @@
 
 浏览器中唤起App的
 
-## 线上尝试
+### 线上尝试
 
-<!-- - 直接在浏览器中打开 [StackBlitz]('dd') 来尝试使用。 -->
+- 直接在浏览器中打开 [StackBlitz]('https://stackblitz.com/edit/vitejs-vite-q2zda8?file=README.md') 来尝试使用。
 
-## npm 使用
+### npm 使用
 
 ``` bash
 npm install @niansu/fly-to-app -S
 ```
 
-## 通过 CDN 使用
+### 通过 CDN 使用
 
 ``` js
-<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.3/dist/umd/index.umd.js"></script>
+<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.6/dist/umd/index.umd.js"></script>
 ```
 
 所有顶层 API 都以属性的形式暴露在了FlyToApp对象上。这里有一个使用全局构建版本的例子：
 
 ``` js
-<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.3/dist/umd/index.umd.js"></script>
+<script src="https://unpkg.com/browse/@niansu/fly-to-app@1.0.6/dist/umd/index.umd.js"></script>
 
 <script type="module">
    console.log(window.FlyToApp);
@@ -39,7 +39,7 @@ npm install @niansu/fly-to-app -S
   </script>
 ```
 
-## 使用 ES 模块构建版本
+### 使用 ES 模块构建版本
 
 ``` javascript
 import { openApp } from '@niansu/fly-to-app'
