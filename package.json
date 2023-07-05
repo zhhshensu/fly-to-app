@@ -1,6 +1,6 @@
 {
 	"name": "@niansu/fly-to-app",
-	"version": "1.0.8",
+	"version": "1.0.10",
 	"description": "h5 唤起app",
 	"main": "dist/cjs/index.js",
 	"module": "dist/es/index.esm.js",
@@ -14,8 +14,8 @@
 		}
 	},
 	"scripts": {
-		"dev": "npx rollup -wc rollup.config.dev.mjs",
-		"build": "rimraf dist && npx rollup -c rollup.config.mjs",
+		"dev": "npx rollup -wc rollup.config.mjs --environment BUILD:development",
+		"build": "rimraf dist && npx rollup -c rollup.config.mjs --environment BUILD:production",
 		"prepare": "husky install",
 		"lint": "eslint src",
 		"fix": "eslint src --fix",

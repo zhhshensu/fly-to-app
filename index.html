@@ -3,23 +3,56 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
 		<title>fly-to-app</title>
 	</head>
 	<body>
+		<div
+			class="w-screen h-screen bg-blue-300 py-20 px-4 flex flex-col"
+			id="main"
+		>
+			<select id="select-id" class="w-100 leading-5 h-8 outline-none px-4">
+				<option value="es" selected>ES</option>
+				<option value="umd">umd</option>
+			</select>
+			<button
+				id="btn"
+				class="mt-4 px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-full shadow-sm"
+			>
+				唤起App
+			</button>
+		</div>
 		<script src="dist/umd/index.umd.js"></script>
 		<script type="module">
-			console.log(window.FlyToApp)
-			const { openApp } = window.FlyToApp
+			import { openApp } from './dist/es/index.esm.js'
 			// 打开微信
 			const source = `weixin://dl/scan`
-			openApp({
-				source,
-				isApp: false, // 是否在app中
-				target: 'http://www.baidu.com',
-				cb: () => {
-					window.alert('打开成功')
-				},
-			})
+
+			const select = document.querySelector('#select-id')
+			const btn = document.querySelector('#btn')
+			const value = select.options[select.selectedIndex].value
+			let invoke
+			btn.onclick = function () {
+				if (value === 'es') {
+					invoke = openApp
+				} else {
+					invoke = window.FlyToApp && window.FlyToApp.openApp
+				}
+				invoke({
+					source,
+					target: 'https://www.baidu.com',
+					cb: (os) => {
+						window.alert('打开成功\n' + JSON.stringify(os))
+					},
+				})
+					.then(() => {
+						console.log('ok')
+						window.alert('ok')
+					})
+					.catch(() => {
+						console.log('error')
+					})
+			}
 		</script>
 	</body>
 </html>
