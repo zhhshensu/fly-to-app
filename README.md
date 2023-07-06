@@ -46,12 +46,12 @@ import { openApp } from '@niansu/fly-to-app'
 // 打开微信
 const source = `weixin://dl/scan`
 openApp({
- source, // 带scheme地址
- target: 'http://www.baidu.com', // 目标地址
- iosBrowserUser: '', // 默认值micromessenger,weibo,mailapp,qq/
- androidToBrowserUser: '', // 默认值micromessenger,weibo,qq/
- cb: (os) => {
-  console.log(os) //
- },
+  source, // 带scheme地址
+  target: 'http://www.baidu.com', // 目标地址
+  iosBrowserUser: '', // 默认值micromessenger,weibo,mailapp,qq/
+  androidToBrowserUser: '', // 默认值micromessenger,weibo,qq/
+  cb: (os) => {
+    console.log(os) //
+  },
 })
 ```
